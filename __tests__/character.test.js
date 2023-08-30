@@ -26,6 +26,12 @@ describe ('Character', () => {
     character.classDeterminer();
     expect(character.class).toEqual("wizard");
   });
+
+  test('classDeterminer method should use attributes to determine character class -- str and dex are equal -- resulting in duelist', () => {
+    const character = new Character(7,7,6);
+    character.classDeterminer();
+    expect(character.class).toEqual("duelist");
+  });
 });
 
 
