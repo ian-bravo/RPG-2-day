@@ -14,6 +14,12 @@ describe ('Character', () => {
     character.classDeterminer();
     expect(character.class).toEqual("warrior");
   });
+
+  test('classDeterminer method should use attributes to determine character class -- dex being highest value -- resulting in rogue', () => {
+    const character = new Character(6,10,4);
+    character.classDeterminer();
+    expect(character.class).toEqual("rogue");
+  });
 });
 
 
