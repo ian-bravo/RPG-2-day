@@ -39,6 +39,12 @@ describe ('Character', () => {
     character.classDeterminer();
     expect(character.class).toEqual("templar");
   });
+
+  test('classDeterminer method should use attributes to determine character class -- dex and int are equal -- resulting in shadow', () => {
+    const character = new Character(6, 7, 7);
+    character.classDeterminer();
+    expect(character.class).toEqual("shadow");
+  });
 });
 
 
