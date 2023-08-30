@@ -20,6 +20,12 @@ describe ('Character', () => {
     character.classDeterminer();
     expect(character.class).toEqual("rogue");
   });
+
+  test('classDeterminer method should use attributes to determine character class -- int being highest value -- resulting in wizard', () => {
+    const character = new Character(4, 6, 10);
+    character.classDeterminer();
+    expect(character.class).toEqual("wizard");
+  });
 });
 
 
