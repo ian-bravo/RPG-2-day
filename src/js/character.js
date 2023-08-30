@@ -6,24 +6,29 @@ export default class Character {
   }
 
   classDeterminer() {
-    if ((this.str > this.dex) && (this.str > this.int)) {
-      this.class = "warrior";
+    if (this.str > 0 && this.dex > 0 && this.int > 0) {
+      if ((this.str > this.dex) && (this.str > this.int)) {
+        this.class = "warrior";
+      }
+      else if ((this.dex > this.str) && (this.dex > this.int)) {
+        this.class = "rogue";
+      }
+      else if ((this.int > this.str) && (this.int > this.dex)) {
+        this.class = "wizard";
+      }
+      else if (this.str === this.dex) {
+        this.class = "duelist";
+      }
+      else if (this.str === this.int) {
+        this.class = "templar";
+      }
+      //else if (this.dex === this.int) 
+      else {
+        this.class = "shadow";
+      }
     }
-    else if ((this.dex > this.str) && (this.dex > this.int)) {
-      this.class = "rogue";
+    else {
+      this.class = null;
     }
-    else if ((this.int > this.str) && (this.int > this.dex)) {
-      this.class = "wizard";
-    }
-    else if (this.str === this.dex) {
-      this.class = "duelist";
-    }
-    else if (this.str === this.int) {
-      this.class = "templar";
-    }
-    else if (this.dex === this.int) {
-      this.class = "shadow";
-    }
-
   }
 }
