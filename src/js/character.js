@@ -33,6 +33,6 @@ export default class Character {
   }
 
   hpDeterminer () {
-    
+    this.hp = this.str * 2;
   }
 }
