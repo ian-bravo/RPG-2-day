@@ -45,6 +45,12 @@ describe ('Character', () => {
     character.classDeterminer();
     expect(character.class).toEqual("shadow");
   });
+
+  test('classDeterminer method should use attributes to determine character class -- if properties do not match any of the above cases, set this.class to null', () => {
+    const character = new Character(0, 0, 0);
+    character.classDeterminer();
+    expect(character.class).toEqual(null);    
+  });
 });
 
 
