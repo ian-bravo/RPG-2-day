@@ -31,4 +31,8 @@ export default class Character {
       this.class = null;
     }
   }
+
+  hpDeterminer () {
+    
+  }
 }

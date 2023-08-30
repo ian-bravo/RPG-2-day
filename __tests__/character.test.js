@@ -51,6 +51,12 @@ describe ('Character', () => {
     character.classDeterminer();
     expect(character.class).toEqual(null);    
   });
+
+  test('hpDeterminer method should use the str attribute to determine a characters hp', () => {
+    const character = new Character(6, 4, 10);
+    character.hpDeterminer();
+    expect(character.hp).toEqual(12);
+  });
 });
 
 
