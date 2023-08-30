@@ -6,6 +6,8 @@ export default class Character {
   }
 
   classDeterminer() {
-    
+    if ((this.str > this.dex) && (this.str > this.int)) {
+      this.class = "warrior";
+    }        
   }
 }
