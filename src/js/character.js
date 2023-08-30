@@ -5,4 +5,7 @@ export default class Character {
     this.int = setInt;
   }
 
+  classDeterminer() {
+    
+  }
 }

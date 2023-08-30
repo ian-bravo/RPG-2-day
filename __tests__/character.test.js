@@ -9,6 +9,11 @@ describe ('Character', () => {
     expect(character.int).toEqual(4);
   });
   
+  test('classDeterminer method should use attributes to determine character class -- str being highest value -- resulting in warrior', () => {
+    const character = new Character(10, 6, 4);
+    character.classDeterminer();
+    expect(character.class).toEqual("warrior");
+  });
 });
 
 
