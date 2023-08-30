@@ -12,5 +12,8 @@ export default class Character {
     if ((this.dex > this.str) && (this.dex > this.int)) {
       this.class = "rogue";
     }
+    if ((this.int > this.str) && (this.int > this.dex)) {
+      this.class = "wizard";
+    }
   }
 }
