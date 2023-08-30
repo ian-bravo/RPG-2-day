@@ -1,6 +1,8 @@
 export default class Character {
-  constructor () {
-
+  constructor (setStr, setDex, setInt) {
+    this.str = setStr;
+    this.dex = setDex;
+    this.int = setInt;
   }
 
 }
