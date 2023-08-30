@@ -18,6 +18,9 @@ export default class Character {
     else if (this.str === this.dex) {
       this.class = "duelist";
     }
+    else if (this.str === this.int) {
+      this.class = "templar";
+    }
 
   }
 }
