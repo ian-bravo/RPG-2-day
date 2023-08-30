@@ -33,6 +33,12 @@ describe ('Character', () => {
     character.classDeterminer();
     expect(character.class).toEqual("duelist");
   });
+
+  test('classDeterminer method should use attributes to determine character class -- str and int are equal -- resulting in templar', () => {
+    const character = new Character(7, 6, 7);
+    character.classDeterminer();
+    expect(character.class).toEqual("templar");
+  });
 });
 
 
