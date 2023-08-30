@@ -9,11 +9,15 @@ export default class Character {
     if ((this.str > this.dex) && (this.str > this.int)) {
       this.class = "warrior";
     }
-    if ((this.dex > this.str) && (this.dex > this.int)) {
+    else if ((this.dex > this.str) && (this.dex > this.int)) {
       this.class = "rogue";
     }
-    if ((this.int > this.str) && (this.int > this.dex)) {
+    else if ((this.int > this.str) && (this.int > this.dex)) {
       this.class = "wizard";
     }
+    else if (this.str === this.dex) {
+      this.class = "duelist";
+    }
+
   }
 }
