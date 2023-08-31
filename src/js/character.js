@@ -32,6 +32,6 @@ export default class Character {
   }
 
   critDeterminer() {
-    // this.critChance = this.dex;
+    this.critChance = this.dex;
   }
 }
