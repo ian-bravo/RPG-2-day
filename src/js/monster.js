@@ -5,4 +5,6 @@ export default class Monster {
     this.pAttackPower = 10;
     this.defense = 5;
   }
+
+  updateHp() {}
 }

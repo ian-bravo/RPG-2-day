@@ -8,4 +8,11 @@ describe("Monster", () => {
     expect(monster.pAttackPower).toEqual(10);
     expect(monster.defense).toEqual(5);
   });
+
+  test("should apply the damage taken to the targets hp", () => {
+    const monster = new Monster();
+    let inflictedDmg = 5;
+    monster.updateHp(inflictedDmg);
+    expect(monster.hp).toEqual(95);
+  });
 });
