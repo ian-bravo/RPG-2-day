@@ -15,4 +15,11 @@ describe("Monster", () => {
     monster.updateHp(inflictedDmg);
     expect(monster.hp).toEqual(95);
   });
+
+  test("should update alive status to false if hp is 0, or below", () => {
+    const monster = new Monster();
+    monster.hp = 0;
+    monster.updateAliveStatus();
+    expect(monster.alive).toEqual(false);
+  });
 });

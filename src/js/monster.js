@@ -9,4 +9,12 @@ export default class Monster {
   updateHp(dmgTaken) {
     this.hp = this.hp - dmgTaken;
   }
+
+  updateAliveStatus() {
+    // if (this.hp <= 0) {
+    //   this.alive = false;
+    // } else {
+    //   this.alive = true;
+    // }
+  }
 }
