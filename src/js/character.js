@@ -48,4 +48,6 @@ export default class Character {
   defenseDeterminer() {
     this.defense = this.str;
   }
+
+  critDmgDeterminer() {}
 }

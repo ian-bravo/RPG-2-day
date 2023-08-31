@@ -86,4 +86,10 @@ describe("Character", () => {
     character.defenseDeterminer();
     expect(character.defense).toEqual(10);
   });
+
+  test("should define what the damage multiplier is when getting a critical hit", () => {
+    const character = new Character(2, 2, 16);
+    character.critDmgDeterminer();
+    expect(character.critDmg).toEqual(320);
+  });
 });

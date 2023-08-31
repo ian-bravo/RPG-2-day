@@ -6,3 +6,5 @@ export default function calcDmgToReceive(targetOfAtk, incomingDmg) {
   }
   return damageToHp;
 }
+
+//new function, outputs incomingDmg

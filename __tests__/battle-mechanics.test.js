@@ -1,5 +1,6 @@
 import calcDmgToReceive from "../src/js/battle-mechanics";
 import Monster from "../src/js/monster";
+import Character from "../src/js/character";
 
 describe("calcDmgToReceive", () => {
   test("should take two parameters, the target of attack - class monster or character, and incomingDamage, then takes into consideration this.defense and returns damage taken", () => {
