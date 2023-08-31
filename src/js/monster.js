@@ -11,10 +11,10 @@ export default class Monster {
   }
 
   updateAliveStatus() {
-    // if (this.hp <= 0) {
-    //   this.alive = false;
-    // } else {
-    //   this.alive = true;
-    // }
+    if (this.hp <= 0) {
+      this.alive = false;
+    } else {
+      this.alive = true;
+    }
   }
 }
