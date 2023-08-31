@@ -70,4 +70,11 @@ describe("Character", () => {
     character.critDeterminer();
     expect(character.critChance).toEqual(4);
   });
+
+  // pAttackPowerDeterminer method
+  test("pAttackPowerDeterminer method should use the str attribute to determine a characters physical attack power", () => {
+    const character = new Character(10, 6, 4);
+    character.pAttackPowerDeterminer();
+    expect(character.pAttackPower).toEqual(10);
+  });
 });
