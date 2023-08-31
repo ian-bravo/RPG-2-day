@@ -2,12 +2,16 @@ import Character from "./../src/js/character.js";
 
 describe("Character", () => {
   // Character constructor
-  test("should correctly generate a character with the following attributes: str, dex, int", () => {
+  test("should correctly generate a character with the following attributes: str, dex, int, hp, critChance", () => {
     const character = new Character(10, 6, 4);
     console.log(character);
     expect(character.str).toEqual(10);
     expect(character.dex).toEqual(6);
     expect(character.int).toEqual(4);
+    expect(character.class).toEqual(null);
+    expect(character.alive).toEqual(true);
+    expect(character.hp).toEqual(null);
+    expect(character.critChance).toEqual(null);
   });
 
   // classDeterminer method
