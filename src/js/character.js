@@ -39,5 +39,7 @@ export default class Character {
     this.critChance = this.dex;
   }
 
-  pAttackPowerDeterminer() {}
+  pAttackPowerDeterminer() {
+    this.pAttackPower = this.str;
+  }
 }
