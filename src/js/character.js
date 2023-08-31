@@ -49,5 +49,7 @@ export default class Character {
     this.defense = this.str;
   }
 
-  critDmgDeterminer() {}
+  critDmgDeterminer() {
+    this.critDmg = this.int * 20;
+  }
 }

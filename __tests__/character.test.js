@@ -87,6 +87,7 @@ describe("Character", () => {
     expect(character.defense).toEqual(10);
   });
 
+  // critDmgDeterminer method
   test("should define what the damage multiplier is when getting a critical hit", () => {
     const character = new Character(2, 2, 16);
     character.critDmgDeterminer();
