@@ -22,4 +22,11 @@ describe("Monster", () => {
     monster.updateAliveStatus();
     expect(monster.alive).toEqual(false);
   });
+
+  test("should update alive status to true if hp is 1, or greater", () => {
+    const monster = new Monster();
+    monster.hp = 1;
+    monster.updateAliveStatus();
+    expect(monster.alive).toEqual(true);
+  });
 });
