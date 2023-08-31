@@ -78,4 +78,11 @@ describe("Character", () => {
     character.pAttackPowerDeterminer();
     expect(character.pAttackPower).toEqual(10);
   });
+
+  // defenseDeterminer method
+  test("defenseDeterminer method should use the str attribute to deetermine a characters defense stat", () => {
+    const character = new Character(10, 6, 4);
+    character.defenseDeterminer();
+    expect(character.defense).toEqual(10);
+  });
 });

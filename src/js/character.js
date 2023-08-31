@@ -43,4 +43,6 @@ export default class Character {
   pAttackPowerDeterminer() {
     this.pAttackPower = this.str;
   }
+
+  defenseDeterminer() {}
 }
