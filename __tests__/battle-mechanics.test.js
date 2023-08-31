@@ -1,4 +1,4 @@
-import calcDmgToReceive from "../src/js/battle-mechanics";
+import { calcDmgToReceive, isItCritOrNot } from "../src/js/battle-mechanics";
 import Monster from "../src/js/monster";
 import Character from "../src/js/character";
 
@@ -42,5 +42,21 @@ describe("testBattle", () => {
     console.log(`Monster hp is: ${monster.hp}`);
     expect(monster.hp).toEqual(0);
     console.log(`Monster alive status: ${monster.alive}`);
+  });
+
+  // describe("rollDice", () => {
+  //   test("should return a number between 1 and 100", () => {
+  //     let result = rollDice();
+  //     console.log(result);
+  //     expect(result).toBeGreaterThanOrEqual(1);
+  //     expect(result).toBeLessThan(101);
+  //   });
+  // });
+  describe("isItCritOrNot", () => {
+    test("should return crit if it's above 50, and not if it's under 50", () => {
+      let result = isItCritOrNot();
+      console.log(result);
+      expect(result).toEqual("crit");
+    });
   });
 });
