@@ -6,5 +6,7 @@ export default class Monster {
     this.defense = 5;
   }
 
-  updateHp() {}
+  updateHp(dmgTaken) {
+    this.hp = this.hp - dmgTaken;
+  }
 }
