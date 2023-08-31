@@ -8,6 +8,7 @@ export default class Character {
     this.hp = null;
     this.critChance = null;
     this.pAttackPower = null;
+    this.defense = null;
   }
 
   classDeterminer() {
