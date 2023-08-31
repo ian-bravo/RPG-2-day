@@ -12,6 +12,7 @@ describe("Character", () => {
     expect(character.alive).toEqual(true);
     expect(character.hp).toEqual(null);
     expect(character.critChance).toEqual(null);
+    expect(character.pAttackPower).toEqual(null);
   });
 
   // classDeterminer method
