@@ -1,4 +1,4 @@
-import { calcDmgToReceive, rollDice } from "../src/js/battle-mechanics";
+import { calcDmgToReceive, rollDice, isItCritOrNot } from "../src/js/battle-mechanics";
 import Monster from "../src/js/monster";
 import Character from "../src/js/character";
 
@@ -52,11 +52,15 @@ describe("testBattle", () => {
     });
   });
 
-  // describe("isItCritOrNot", () => {
-  //   test("should return crit if it's above 50, and not if it's under 50", () => {
-  //     let result = isItCritOrNot();
-  //     console.log(result);
-  //     expect(result).toEqual("crit");
-  //   });
-  // });
+  describe("isItCritOrNot", () => {
+    test("should return true if it's within the character's crit chane, and false if it is not", () => {
+      const character = new Character(10, 6, 4);
+      let result = isItCritOrNot(character);
+      expect(result).toEqual(false);
+    });
+  });
 });
+
+// const mockMath = Object.create(global.Math);
+// mockMath.random = () => 7;
+// global.Math = mockMath;
