@@ -7,7 +7,9 @@ export function calcDmgToReceive(targetOfAtk, incomingDmg) {
   return damageToHp;
 }
 
-export function rollDice() {}
+export function rollDice() {
+  return 1 + Math.floor(Math.random() * 100);
+}
 
 // export function isItCritOrNot(attacker) {
 //   let dieRoll = 1 + Math.floor(Math.random() * 100);

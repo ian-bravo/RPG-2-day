@@ -47,7 +47,6 @@ describe("testBattle", () => {
   describe("rollDice", () => {
     test("should return a number between 1 and 100", () => {
       let result = rollDice();
-      console.log(result);
       expect(result).toBeGreaterThanOrEqual(1);
       expect(result).toBeLessThan(101);
     });
