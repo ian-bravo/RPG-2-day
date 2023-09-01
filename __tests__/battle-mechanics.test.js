@@ -55,6 +55,7 @@ describe("testBattle", () => {
   describe("isItCritOrNot", () => {
     test("should return true if it's within the character's crit chane, and false if it is not", () => {
       const character = new Character(10, 6, 4);
+      character.critDeterminer();
       let result = isItCritOrNot(character);
       expect(result).toEqual(false);
     });

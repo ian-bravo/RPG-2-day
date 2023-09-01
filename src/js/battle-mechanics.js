@@ -12,10 +12,10 @@ export function rollDice() {
 }
 
 export function isItCritOrNot(attacker) {
-  // let dieRoll = rollDice();
-  // if (dieRoll >= attacker.critChance) {
-  //   return true;
-  // } else {
-  //   return false;
-  // }
+  let dieRoll = rollDice();
+  if (dieRoll <= attacker.critChance) {
+    return true;
+  } else {
+    return false;
+  }
 }
