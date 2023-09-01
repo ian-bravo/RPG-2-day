@@ -7,13 +7,14 @@ export function calcDmgToReceive(targetOfAtk, incomingDmg) {
   return damageToHp;
 }
 
-//new function, outputs incomingDmg
-export function isItCritOrNot() {
-  let dieRoll = 1 + Math.floor(Math.random() * 100);
+export function rollDice() {}
 
-  if (dieRoll >= 50) {
-    return "crit";
-  } else {
-    return "not";
-  }
-}
+// export function isItCritOrNot(attacker) {
+//   let dieRoll = 1 + Math.floor(Math.random() * 100);
+
+//   if (dieRoll >= attacker.critChance) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
