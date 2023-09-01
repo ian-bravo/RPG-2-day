@@ -2,12 +2,18 @@ import Character from "./../src/js/character.js";
 
 describe("Character", () => {
   // Character constructor
-  test("should correctly generate a character with the following attributes: str, dex, int", () => {
+  test("should correctly generate a character with the following attributes: str, dex, int, hp, critChance", () => {
     const character = new Character(10, 6, 4);
     console.log(character);
     expect(character.str).toEqual(10);
     expect(character.dex).toEqual(6);
     expect(character.int).toEqual(4);
+    expect(character.class).toEqual(null);
+    expect(character.alive).toEqual(true);
+    expect(character.hp).toEqual(null);
+    expect(character.critChance).toEqual(null);
+    expect(character.pAttackPower).toEqual(null);
+    expect(character.defense).toEqual(null);
   });
 
   // classDeterminer method
@@ -65,5 +71,26 @@ describe("Character", () => {
     const character = new Character(6, 4, 10);
     character.critDeterminer();
     expect(character.critChance).toEqual(4);
+  });
+
+  // pAttackPowerDeterminer method
+  test("pAttackPowerDeterminer method should use the str attribute to determine a characters physical attack power", () => {
+    const character = new Character(10, 6, 4);
+    character.pAttackPowerDeterminer();
+    expect(character.pAttackPower).toEqual(10);
+  });
+
+  // defenseDeterminer method
+  test("defenseDeterminer method should use the str attribute to deetermine a characters defense stat", () => {
+    const character = new Character(10, 6, 4);
+    character.defenseDeterminer();
+    expect(character.defense).toEqual(10);
+  });
+
+  // critDmgDeterminer method
+  test("should define what the damage multiplier is when getting a critical hit", () => {
+    const character = new Character(2, 2, 16);
+    character.critDmgDeterminer();
+    expect(character.critDmg).toEqual(320);
   });
 });

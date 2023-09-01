@@ -3,6 +3,12 @@ export default class Character {
     this.str = setStr;
     this.dex = setDex;
     this.int = setInt;
+    this.class = null;
+    this.alive = true;
+    this.hp = null;
+    this.critChance = null;
+    this.pAttackPower = null;
+    this.defense = null;
   }
 
   classDeterminer() {
@@ -33,5 +39,17 @@ export default class Character {
 
   critDeterminer() {
     this.critChance = this.dex;
+  }
+
+  pAttackPowerDeterminer() {
+    this.pAttackPower = this.str;
+  }
+
+  defenseDeterminer() {
+    this.defense = this.str;
+  }
+
+  critDmgDeterminer() {
+    this.critDmg = this.int * 20;
   }
 }
