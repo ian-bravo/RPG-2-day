@@ -2,14 +2,17 @@
 export const createState = (prop) => {   //sets str/dex/int
   return (value) => {
     return (state) => ({
-      // ...state,
-      // [prop] : value
+      ...state,
+      [prop] : value
       })
     } 
   }
   
 
 const strength = createState("str");
+const dexterity = createState("dex");
+const intelligent = createState("int");
+
 
 
 export default class Character {
