@@ -1,9 +1,25 @@
+
+export const createState = (prop) => {   //sets str/dex/int
+  return (value) => {
+    return (state) => ({
+      // ...state,
+      // [prop] : value
+      })
+    } 
+  }
+  
+
+const strength = createState("str");
+
+
 export default class Character {
   constructor(setStr, setDex, setInt) {
     this.str = setStr;
     this.dex = setDex;
     this.int = setInt;
+
     this.class = null;
+
     this.alive = true;
     this.hp = null;
     this.critChance = null;
